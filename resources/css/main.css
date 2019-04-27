@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+}
+.wrapper {
+  padding: 20px;
+}
+header,
+footer {
+  padding: 10px 0;
+  background-color: #CCC;
+}
+.image-lg {
+  width: 150px;
+  height: auto;
+}

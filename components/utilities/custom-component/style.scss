@@ -1,0 +1,38 @@
+// @import "tgam-patterns/patterns/stylesheets/components.button";
+//
+// The above results in the following error:
+//
+// Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):
+// ModuleBuildError: Module build failed (from ./node_modules/sass-loader/lib/loader.js):
+//
+// @import "tgam-patterns/patterns/stylesheets/components.button";
+//        ^
+//       Can't find stylesheet to import.
+//   ╷
+// 1 │ @import "tgam-patterns/patterns/stylesheets/components.button";
+//   │         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+//   ╵
+
+// @import "tgam-patterns/patterns/stylesheets/_components.button.scss";
+//
+// The above results in the following error:
+//
+// Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):
+// ModuleBuildError: Module build failed (from ./node_modules/sass-loader/lib/loader.js):
+//
+// @import "tools.mixins";
+//        ^
+//       NoSuchMethodError: method not found: 'gt' on null
+//   ╷
+// 3 │ @import "tools.mixins";
+//   │         ^^^^^^^^^^^^^^
+//   ╵
+//   bundle/node_modules/tgam-patterns/patterns/stylesheets/mixins/_base.focus.scss 3:9  @import
+//   bundle/node_modules/tgam-patterns/patterns/stylesheets/_components.button.scss 3:9  @import
+
+$bg-col: teal;
+
+.custom-component {
+  padding: 10px;
+  background-color: $bg-col;
+}

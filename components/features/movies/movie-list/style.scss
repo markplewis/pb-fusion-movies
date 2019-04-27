@@ -1,0 +1,14 @@
+// @import "tgam-patterns/patterns/stylesheets/components.button";
+
+// @import "bulma/sass/base/generic";
+
+// @import "bulma/css/bulma.css";
+
+// @import "uikit/src/scss/variables-theme.scss";
+
+$image-width: 100px;
+
+.image-sm {
+  width: $image-width;
+  height: auto;
+}

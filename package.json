@@ -1,0 +1,22 @@
+{
+  "name": "Fusion-Movies",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "fusion": "fusion",
+    "start": "fusion start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@arc-fusion/cli": "^1.0.3"
+  },
+  "dependencies": {
+    "bulma": "^0.7.4",
+    "tgam-patterns": "^4.3.5",
+    "uikit": "^3.1.4"
+  }
+}
