@@ -28,6 +28,13 @@ class MovieList extends Component {
     console.log("Loading...");
     console.log(contentConfigValues);
 
+    // Grab the movie title from global content and alter the query
+    const { Title } = this.props.globalContent || {}
+    if (Title) {
+      contentConfigValues.movieQuery = Title;
+    }
+    console.log(contentConfigValues);
+
     // ...then we can use these values to replace our hardcoded content source name with `contentService` and our query object with `contentConfigValues` (merged with the `page` param)
     const { fetched } = this.getContent(contentService, Object.assign(contentConfigValues, { page: this.state.page }), '{ totalResults Search { Title Year Poster } }')
 

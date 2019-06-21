@@ -18,7 +18,7 @@ class CustomComponent extends Component {
         <img src={photoSVG} width="100" />
         
         <button className="c-button c-button--white-primary" type="button">
-          <svg className="c-button__icon" role="img" pointerEvents="none" focusable="false" ariaHidden="true">
+          <svg className="c-button__icon" role="img" pointerEvents="none" focusable="false" aria-hidden="true">
             <use xlinkHref={svgSprite + "#icon-calc"} />
           </svg>
           <span className="c-button__text">Button text</span>
