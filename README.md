@@ -16,4 +16,6 @@ PB admin:
 - http://localhost/pf/admin/app/browse/pages.html
 - http://localhost/pf/admin/app/tools/resolver-configs.html (because dev tools tab isn't appearing)
 
-Site: http://localhost/movies/Captain-Marvel
+Site:
+- http://localhost/movies/Captain-Marvel
+- http://localhost/politics/article-ottawa-moves-to-end-employers-monopoly-on-foreign-workers/
