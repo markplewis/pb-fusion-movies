@@ -24,7 +24,7 @@ class MovieDetail extends Component {
     )
 
     {/* Here, we extract the data we want from `this.props.globalContent`, which we "short circuit" default to an empty object, just in case it doesn't exist */}
-    const { Actors, Director, Plot, Poster, Rated, Title, Writer, Year } = this.props.globalContent || {}
+    const { Actors, Director, Plot, Poster, Rated, Title, Writer, Year, imdbID } = this.props.globalContent || {}
 
     // We can extract our custom field values here, and even set default values if desired...
     const { moviePrefix = 'Movie', showExtendedInfo = false } = this.props.customFields
@@ -38,6 +38,7 @@ class MovieDetail extends Component {
         {Director && <p><strong>Director:</strong> {Director}</p>}
         {Actors && <p><strong>Actors:</strong> {Actors}</p>}
         {Plot && <p><strong>Plot:</strong> {isPlotShown && Plot} {plotButton}</p>}
+        {imdbID && <p><strong>imdbID:</strong> {imdbID}</p>}
         
         {/* we can use our boolean value `showExtendedInfo` to determine if certain data gets displayed or not */}
         {showExtendedInfo &&

@@ -36,7 +36,7 @@ class MovieList extends Component {
     console.log(contentConfigValues);
 
     // ...then we can use these values to replace our hardcoded content source name with `contentService` and our query object with `contentConfigValues` (merged with the `page` param)
-    const { fetched } = this.getContent(contentService, Object.assign(contentConfigValues, { page: this.state.page }), '{ totalResults Search { Title Year Poster } }')
+    const { fetched } = this.getContent(contentService, Object.assign(contentConfigValues, { page: this.state.page }), '{ totalResults Search { Title Year Poster imdbID } }')
 
     fetched.then(response => {
       console.log("Loaded");
@@ -45,7 +45,8 @@ class MovieList extends Component {
         return;
       }
       this.setState({
-        movies: [...this.state.movies, ...response.Search],
+        // Slice off the first result so it doesn't match movie-detail
+        movies: [...this.state.movies, ...response.Search.slice(1)],
         page: this.state.page + 1
       })
     })
@@ -66,14 +67,18 @@ class MovieList extends Component {
       <Fragment>
         <h2>Movies</h2>
         <div>
-          {movies && movies.map((movie, idx) =>
-            <div key={`movie-${idx}`}>
+          {movies && movies.map((movie, idx) => {
+            const showImage = movie.Poster && movie.Poster !== "N/A";
+
+            return <div className="movie" key={`movie-${idx}`}>
               <h4>{movie.Title}</h4>
               <p><strong>Year:</strong> {movie.Year}</p>
-              <img src={movie.Poster} className='image-sm' />
+
+              {showImage && <img src={movie.Poster} className='image-sm' />}
+              {!showImage && <p>No image</p>}
             </div>
-          )}
-          <button onClick={() => { this.fetch() }}>More</button>
+          })}
+          <button className="more-button" onClick={() => { this.fetch() }}>More</button>
         </div>
       </Fragment>
     )
