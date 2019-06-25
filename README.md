@@ -7,6 +7,12 @@
 5. Run database migrations (if applicable)
 6. Paste the required data into the `.env` file
 
+While Fusion is running, if you don't see changes to your code reflected in your browser, then tru running the following in a separate terminal tab:
+```
+# This may or may not help
+npx fusion rebuild
+```
+
 ## Info
 
 - Docs: https://secure.tgam.arcpublishing.com/alc/arc-products/pagebuilder/fusion/
