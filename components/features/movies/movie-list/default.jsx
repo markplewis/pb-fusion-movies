@@ -78,7 +78,7 @@ class MovieList extends Component {
               {!showImage && <p>No image</p>}
             </div>
           })}
-          <button className="more-button" onClick={() => { this.fetch() }}>More</button>
+          <button className="c-button c-button--utility-primary--red more-button" onClick={() => { this.fetch() }}>More</button>
         </div>
       </Fragment>
     )

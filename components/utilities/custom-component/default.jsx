@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 
 import "./style.scss";
 
-import svgSprite from "tgam-patterns/patterns/images/member-centre-sprite.svg";
-import photoImg from "tgam-patterns/patterns/images/realtor-logo.png";
-import photoSVG from "tgam-patterns/patterns/images/flag-can.svg";
+import svgSprite from "tgam-patterns/assets/patterns/images/member-centre-sprite.svg";
+import photoImg from "tgam-patterns/assets/patterns/images/stockcalc-logo.png";
+import photoSVG from "tgam-patterns/assets/patterns/images/flag-can.svg";
 
 class CustomComponent extends Component {
   render() {
