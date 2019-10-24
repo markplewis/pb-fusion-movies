@@ -12,7 +12,6 @@ const Test = (props) => {
   )
 }
 
-
 Test.propTypes = {
   customFields: PropTypes.shape({
     title: PropTypes.string,
