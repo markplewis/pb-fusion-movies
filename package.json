@@ -1,5 +1,5 @@
 {
-  "name": "Fusion-Movies",
+  "name": "fusion-movies",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,7 +7,8 @@
     "fusion": "fusion",
     "start": "fusion start",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "check": "npx npm-check -s -u"
+    "check": "npx npm-check -s -u",
+    "reinstall": "rm -rf node_modules && rm package-lock.json && npm install"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +17,6 @@
     "@arc-fusion/cli": "^1.0.7"
   },
   "dependencies": {
-    "tgam-patterns": "^5.0.0-alpha.21"
+    "tgam-patterns": "^4.4.21"
   }
 }
