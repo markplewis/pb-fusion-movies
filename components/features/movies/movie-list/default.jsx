@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import Consumer from 'fusion:consumer'
+// import { useContent } from "fusion:content";
 import React, { Fragment, Component } from 'react'
 
 import './style.scss'
@@ -35,11 +36,17 @@ class MovieList extends Component {
     }
     console.log(contentConfigValues);
 
+    // let stories = useContent({
+    //   source: contentService,
+    //   query: Object.assign(contentConfigValues, { page: this.state.page })
+    // });
+    // console.log(stories);
+
     // ...then we can use these values to replace our hardcoded content source name with `contentService` and our query object with `contentConfigValues` (merged with the `page` param)
     const { fetched } = this.getContent(contentService, Object.assign(contentConfigValues, { page: this.state.page }), '{ totalResults Search { Title Year Poster imdbID } }')
 
     fetched.then(response => {
-      console.log("Loaded");
+      console.log("Loaded", response);
       if (!response.totalResults) {
         console.log("No results");
         return;

@@ -1,4 +1,5 @@
-import { OMDB_API_KEY } from 'fusion:environment'
+// import { OMDB_API_KEY } from 'fusion:environment'
+const OMDB_API_KEY = "f8127d89";
 
 const resolve = (query) => {
   const requestUri = `https://www.omdbapi.com/?apikey=${OMDB_API_KEY}&plot=full`

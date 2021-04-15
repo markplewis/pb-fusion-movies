@@ -1,0 +1,9 @@
+[
+  {
+    "_id": "tgam",
+    "display_name": "The Globe and Mail",
+    "base_path": "https://www.theglobeandmail.com",
+    "domains": [],
+    "is_default_website": true
+  }
+]
